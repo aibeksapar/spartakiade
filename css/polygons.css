@@ -1,0 +1,70 @@
+.polygons {
+  position: relative;
+  margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1px;
+  justify-content: space-evenly;
+}
+
+.polygons div {
+  margin: 0 -4px;
+}
+
+.polygons .polygons__row {
+  display: flex;
+}
+
+.polygons__row:nth-child(2) {
+  margin-left: -16px;
+}
+
+.polygons__row:nth-child(3) {
+  margin-left: -28px;
+}
+
+.polygons__row:nth-child(4) {
+  margin-left: -40px;
+}
+
+.polygons__row:nth-child(5) {
+  margin-left: -52px;
+}
+
+.polygon {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 17px solid;
+  border-bottom-color: rgb(255, 255, 255);
+  transform: rotate(180deg);
+}
+
+.p-up {
+  transform: rotate(0deg);
+}
+
+.p-20 {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.p-30 {
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.p-60 {
+  border-bottom-color: rgba(255, 255, 255, 0.6);
+}
+
+.p-70 {
+  border-bottom-color: rgba(255, 255, 255, 0.7);
+}
+
+.p-80 {
+  border-bottom-color: rgba(255, 255, 255, 0.8);
+}
+
+.p-90 {
+  border-bottom-color: rgba(255, 255, 255, 0.9);
+}

@@ -1,0 +1,96 @@
+body {
+  padding: 80px 15px;
+  font-family: "Inter", sans-serif;
+  /* background: url("../img/image_2023-12-12_13-34-521.png"); */
+  background-color: red;
+}
+
+svg {
+  width: 20px;
+  height: 17px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.basis {
+  width: 100%;
+  max-width: 548px;
+  display: flex;
+  position: relative;
+}
+
+.basis__logo {
+  width: 100%;
+  max-width: 143px;
+  height: 89px;
+  transform: skew(-31deg);
+  position: relative;
+  z-index: 2;
+
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.15));
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.basis__logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75px;
+  height: 65.5px;
+  transform: skew(31deg) translate(-25%, -50%);
+}
+
+/* .basis__logo:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75px;
+  height: 65.5px;
+  background: url("../img/jumper-logo.png");
+  transform: skew(31deg) translate(-25%, -50%);
+} */
+
+.basis__img {
+  max-width: 127px;
+  position: absolute;
+  top: -66px;
+  right: 58px;
+  z-index: 2;
+}
+
+.heading-spartakiade {
+  position: absolute;
+  right: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+}
+
+.heading-spartakiade div {
+  display: inline-block;
+  padding: 0 15px;
+  transform: skew(-31deg);
+}
+
+.heading-spartakiade__name {
+  color: #fff;
+  background-color: #242424;
+}
+
+.heading-spartakiade__city {
+  color: #242424;
+  background-color: #fff;
+}
+
+.heading-spartakiade div span {
+  display: inline-block;
+  text-wrap: nowrap;
+  text-transform: uppercase;
+  transform: skew(31deg);
+}
