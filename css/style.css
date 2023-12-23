@@ -15,19 +15,33 @@ svg {
   margin: 0 auto;
 }
 
+@keyframes basisAppearing {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
 .basis {
+  transform: translateX(-100%);
   width: 100%;
-  max-width: 548px;
+  max-width: 1200px;
   display: flex;
   position: relative;
+  animation: basisAppearing 3s ease-in-out forwards;
 }
 
 .basis__logo {
-  width: 100%;
-  max-width: 143px;
-  height: 89px;
+  min-width: 142px;
+  align-self: center;
+  padding: 12px 32px;
+  height: 92px;
   transform: skew(-31deg);
-  position: relative;
   z-index: 2;
 
   filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.15));
@@ -36,12 +50,10 @@ svg {
 }
 
 .basis__logo img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 75px;
+  margin: 0 auto;
+  max-width: 100%;
   height: 65.5px;
-  transform: skew(31deg) translate(-25%, -50%);
+  transform: skew(31deg);
 }
 
 /* .basis__logo:before {
@@ -55,17 +67,64 @@ svg {
   transform: skew(31deg) translate(-25%, -50%);
 } */
 
-.basis__img {
+.heading__img {
+  width: 100%;
+  margin-top: -64px;
+  margin-left: 60%;
+}
+
+.heading__img img {
+  max-width: 100%;
+  height: 109px;
+}
+
+.heading-spartakiade {
+  margin-top: -2px;
+  margin-left: -26%;
+}
+
+.heading-spartakiade__content {
+  position: relative;
+  z-index: 3;
+  max-width: 530px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.heading-spartakiade__content div {
+  display: inline-block;
+  padding: 0 15px;
+  transform: skew(-31deg);
+}
+
+.heading-spartakiade__name {
+  color: #fff;
+  background-color: #242424;
+}
+
+.heading-spartakiade__city {
+  color: #242424;
+  background-color: #fff;
+}
+
+.heading-spartakiade div span {
+  display: inline-block;
+  text-wrap: nowrap;
+  text-transform: uppercase;
+  transform: skew(31deg);
+}
+
+/* .basis__img {
+  margin-top: -66px;
+  margin-left: -17.2%;
   max-width: 127px;
-  position: absolute;
-  top: -66px;
-  right: 58px;
   z-index: 2;
 }
 
 .heading-spartakiade {
   position: absolute;
-  right: 45px;
+  left: 25.2%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -93,4 +152,4 @@ svg {
   text-wrap: nowrap;
   text-transform: uppercase;
   transform: skew(31deg);
-}
+} */

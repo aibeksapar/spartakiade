@@ -1,13 +1,35 @@
 .polygons {
   position: relative;
-  margin-left: 18px;
+  margin-left: 1.5%;
   display: flex;
   flex-direction: column;
   row-gap: 1px;
   justify-content: space-evenly;
 }
 
-.polygons div {
+@keyframes extraAppearing {
+  0% {
+    transform: translateY(1500%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.extra-polygons {
+  opacity: 0;
+  transform: translateY(1500%);
+  display: flex;
+  justify-content: right;
+  animation: extraAppearing 2s ease forwards;
+  animation-delay: 3s;
+}
+
+.polygons div,
+.extra-polygons div {
   margin: 0 -4px;
 }
 
@@ -44,6 +66,10 @@
 .p-up {
   transform: rotate(0deg);
 }
+/*
+.p-10 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
 
 .p-20 {
   border-bottom-color: rgba(255, 255, 255, 0.2);
@@ -51,6 +77,14 @@
 
 .p-30 {
   border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.p-40 {
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+}
+
+.p-50 {
+  border-bottom-color: rgba(255, 255, 255, 0.5);
 }
 
 .p-60 {
@@ -67,4 +101,254 @@
 
 .p-90 {
   border-bottom-color: rgba(255, 255, 255, 0.9);
+} */
+
+/* @keyframes opacityChange {
+  0% {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  25% {
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+  }
+  75% {
+    border-bottom-color: rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    border-bottom-color: rgba(255, 255, 255, 0.9);
+  }
+} */
+
+@keyframes opacityChangeP10 {
+  0%,
+  100% {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    border-bottom-color: rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes opacityChangeP20 {
+  0%,
+  100% {
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    border-bottom-color: rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes opacityChangeP30 {
+  0%,
+  100% {
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    border-bottom-color: rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes opacityChangeP40 {
+  0%,
+  100% {
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+  }
+  25% {
+    border-bottom-color: rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    border-bottom-color: rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes opacityChangeP50 {
+  0%,
+  100% {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  25% {
+    border-bottom-color: rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+  }
+
+  75% {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes opacityChangeP60 {
+  0%,
+  100% {
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    border-bottom-color: rgba(255, 255, 255, 0.7);
+  }
+
+  75% {
+    border-bottom-color: rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes opacityChangeP70 {
+  0%,
+  100% {
+    border-bottom-color: rgba(255, 255, 255, 1);
+  }
+  50% {
+    border-bottom-color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+@keyframes opacityChangeP80 {
+  0%,
+  100% {
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+  }
+
+  75% {
+    border-bottom-color: rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes opacityChangeP90 {
+  0%,
+  100% {
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+  }
+
+  25% {
+    border-bottom-color: rgba(255, 255, 255, 1);
+  }
+
+  50% {
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes opacityChangeP100 {
+  0%,
+  100% {
+    border-bottom-color: rgba(255, 255, 255, 1);
+  }
+  25% {
+    border-bottom-color: rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.polygons .p-10 {
+  animation: opacityChangeP10 5s infinite ease-in;
+}
+
+.polygons .p-20 {
+  animation: opacityChangeP20 8s infinite ease-out;
+}
+
+.polygons .p-30 {
+  animation: opacityChangeP30 7s infinite ease-in;
+}
+
+.polygons .p-40 {
+  animation: opacityChangeP40 9s infinite ease-in-out;
+}
+
+.polygons .p-50 {
+  animation: opacityChangeP50 12s infinite ease-in-out;
+}
+
+.polygons .p-60 {
+  animation: opacityChangeP60 8s infinite ease-in;
+}
+
+.polygons .p-70 {
+  animation: opacityChangeP70 3s infinite ease-out;
+}
+
+.polygons .p-80 {
+  animation: opacityChangeP80 8s infinite ease-in-out;
+}
+
+.polygons .p-90 {
+  animation: opacityChangeP90 5s infinite ease-out;
+}
+
+.polygons .p-100 {
+  animation: opacityChangeP100 6s infinite ease-in;
+}
+
+@keyframes opacityChangeExtraPolygon {
+  0%,
+  15%,
+  85%,
+  100% {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    border-bottom-color: rgba(255, 255, 255, 1);
+  }
+}
+
+.extra-polygons .polygon {
+  animation: opacityChangeExtraPolygon 4s infinite linear forwards;
+}
+
+.extra-polygons .p-10 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  animation-delay: 0s;
+}
+
+.extra-polygons .p-20 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  animation-delay: 0.4s;
+}
+
+.extra-polygons .p-30 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  animation-delay: 0.8s;
+}
+
+.extra-polygons .p-40 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  animation-delay: 1.2s;
+}
+
+.extra-polygons .p-50 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  animation-delay: 1.6s;
+}
+
+.extra-polygons .p-60 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  animation-delay: 2s;
+}
+
+.extra-polygons .p-70 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  animation-delay: 2.4s;
+}
+
+.extra-polygons .p-80 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  animation-delay: 2.8s;
+}
+
+.extra-polygons .p-90 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  animation-delay: 3.2s;
+}
+
+.extra-polygons .p-100 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  animation-delay: 3.6s;
 }
